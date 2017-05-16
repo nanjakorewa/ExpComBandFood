@@ -1,0 +1,48 @@
+digraph {
+	node [shape=box size="16,6"]
+	X [label=X]
+	y [label=y]
+	f [label=f]
+		y -> f [len=0.20]
+	"raw food" [label="raw food"]
+		X -> "raw food" [len=2.00]
+	peel [label=peel]
+		X -> peel [len=2.00]
+	diced [label=diced]
+		"raw food" -> diced [len=2.00]
+		peel -> diced [len=2.00]
+	grind [label=grind]
+		"raw food" -> grind [len=2.00]
+		peel -> grind [len=2.00]
+	chopped [label=chopped]
+		"raw food" -> chopped [len=2.00]
+		peel -> chopped [len=2.00]
+	wash [label=wash]
+		diced -> wash [len=2.00]
+		grind -> wash [len=2.00]
+		chopped -> wash [len=2.00]
+	"wash & boi
+l" [label="wash & boi
+l"]
+		diced -> "wash & boi
+l" [len=2.00]
+		grind -> "wash & boi
+l" [len=2.00]
+		chopped -> "wash & boi
+l" [len=2.00]
+	simmer [label=simmer]
+		simmer -> y [len=1.00]
+		wash -> simmer [len=2.00]
+		"wash & boi
+l" -> simmer [len=2.00]
+	bake [label=bake]
+		bake -> y [len=1.00]
+		wash -> bake [len=2.00]
+		"wash & boi
+l" -> bake [len=2.00]
+	gril [label=gril]
+		gril -> y [len=1.00]
+		wash -> gril [len=2.00]
+		"wash & boi
+l" -> gril [len=2.00]
+}
